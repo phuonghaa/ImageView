@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_animal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_cat"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Kitten"
+        android:backgroundTint="#FFC107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_animal"
+        app:layout_constraintEnd_toStartOf="@id/btn_dog"/>
+
+    <Button
+        android:id="@+id/btn_dog"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Puppy"
+        android:backgroundTint="#009688"
+        app:layout_constraintStart_toEndOf="@id/btn_cat"
+        app:layout_constraintTop_toTopOf="@id/btn_cat"
+        app:layout_constraintEnd_toStartOf="@id/btn_bunny"
+        />
+
+    <Button
+        android:id="@+id/btn_bunny"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="Bunny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_dog"
+        app:layout_constraintTop_toTopOf="@id/btn_dog" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
